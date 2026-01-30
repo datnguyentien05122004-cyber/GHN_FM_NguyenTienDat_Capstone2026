@@ -56,15 +56,11 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <div class="flex items-center space-x-2">
-          <div
-            class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl"
-          >
-            Đ
-          </div>
-          <span
-            class="font-bold text-xl tracking-tight text-blue-900 hidden sm:inline"
-            >TIẾN ĐẠT</span
-          >
+          <img
+            src="assert/logo.jpg"
+            alt="Logo"
+            class="w-10 h-10 rounded-lg object-cover"
+          />
         </div>
         <nav
           class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider"
@@ -479,20 +475,25 @@
       <div class="container mx-auto px-4 text-center">
         <div class="flex justify-center space-x-6 mb-8">
           <a
-            href="#"
+            href="https://www.facebook.com/dat.nguyen.tien.96312"
+            target="_blank"
+            rel="noopener noreferrer"
             class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
             ><i class="fab fa-facebook-f"></i
           ></a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/dat-nguyen-tien-a4565b266/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
             ><i class="fab fa-linkedin-in"></i
           ></a>
-          <a
-            href="#"
-            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
+          <button
+            onclick="copyEmail()"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm cursor-pointer"
+            title="Click để copy email: datnt3@ghn.vn"
             ><i class="fas fa-envelope"></i
-          ></a>
+          ></button>
         </div>
         <p class="text-gray-400 text-sm font-semibold tracking-wide">
           © 2026 NGUYỄN TIẾN ĐẠT - FUTURE MAKER
@@ -516,6 +517,52 @@
           header.classList.remove("py-2", "bg-white/95");
         }
       };
+
+      function copyEmail() {
+        const email = "datnt3@ghn.vn";
+        navigator.clipboard.writeText(email).then(function() {
+          // Tạo thông báo toast
+          const toast = document.createElement("div");
+          toast.textContent = "Đã copy email: " + email;
+          toast.style.cssText = "position: fixed; bottom: 20px; right: 20px; background: #10b981; color: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; font-size: 14px; animation: slideIn 0.3s ease;";
+          document.body.appendChild(toast);
+          
+          setTimeout(function() {
+            toast.style.animation = "slideOut 0.3s ease";
+            setTimeout(function() {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 2000);
+        }).catch(function(err) {
+          alert("Email: " + email + "\n\n(Copy thủ công nếu tự động copy không hoạt động)");
+        });
+      }
+
+      // Thêm CSS animation cho toast
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        @keyframes slideOut {
+          from {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          to {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
     </script>
   </body>
 </html>
