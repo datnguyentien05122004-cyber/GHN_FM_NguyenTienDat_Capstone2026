@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GHN_FM_NguyenTienDat_Capstone2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .bg-gradient-blue {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 8px;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 2px;
+      }
+      .img-zoom {
+        transition: transform 0.5s ease;
+      }
+      .img-zoom:hover {
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full z-50 glass-card shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl"
+          >
+            Đ
+          </div>
+          <span
+            class="font-bold text-xl tracking-tight text-blue-900 hidden sm:inline"
+            >TIẾN ĐẠT</span
+          >
+        </div>
+        <nav
+          class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-wider"
+        >
+          <a href="#profile" class="hover:text-blue-600 transition"
+            >Giới thiệu</a
+          >
+          <a href="#knowledge" class="hover:text-blue-600 transition"
+            >Kiến thức</a
+          >
+          <a href="#workflow" class="hover:text-blue-600 transition">Dự án</a>
+          <a href="#cert" class="hover:text-blue-600 transition">Chứng nhận</a>
+        </nav>
+        <a
+          href="#workflow"
+          class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition shadow-md"
+          >Dự án chính</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section / Profile -->
+    <section id="profile" class="pt-32 pb-20 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/3 text-center">
+            <div class="relative inline-block">
+              <!-- AVATAR - Sử dụng ảnh 1 -->
+              <div
+                class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white"
+              >
+                <img
+                  src="assert/chandung.jpg"
+                  alt="Nguyễn Tiến Đạt"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-xl shadow-lg"
+              >
+                <p class="font-semibold tracking-wide">Future Maker</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <h2
+              class="section-title text-blue-600 font-bold mb-4 uppercase tracking-widest text-sm"
+            >
+              Giới thiệu cá nhân
+            </h2>
+            <h1
+              class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6 leading-tight"
+            >
+              Nguyễn Tiến Đạt
+            </h1>
+            <div class="prose prose-blue text-gray-600 leading-relaxed mb-8">
+              <p
+                class="mb-4 italic border-l-4 border-blue-200 pl-4 bg-blue-50 py-4 rounded-r-lg text-lg"
+              >
+                "Từ một sinh viên năm cuối Kinh doanh Quốc tế với góc nhìn học
+                thuật, hành trình cùng Future Makers tại GHN đã mở ra một cách
+                tiếp cận hoàn toàn mới về doanh nghiệp."
+              </p>
+              <p>
+                Những điểm chạm thực tế - từ các buổi trao đổi thẳng thắn với
+                mentor đến việc tham gia giải quyết bài toán vận hành - đã thay
+                đổi tư duy của tôi. Góc nhìn không còn dừng ở lý thuyết, mà
+                hướng đến việc hiểu gốc rễ vấn đề, cân nhắc chi phí - hiệu quả
+                và chịu trách nhiệm cho lựa chọn của mình. Future Makers trở
+                thành chất xúc tác giúp tôi hình thành tư duy nghề nghiệp bền
+                vững.
+              </p>
+            </div>
+
+            <!-- Roadmap -->
+            <div class="mt-10">
+              <h3
+                class="font-bold text-xl text-blue-800 mb-6 flex items-center"
+              >
+                <i class="fas fa-route mr-2 text-blue-500"></i> Lộ Trình Phát
+                Triển
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="bg-white p-6 rounded-xl border-l-4 border-blue-600 shadow-sm flex items-center justify-between"
+                >
+                  <span class="font-bold text-gray-800"
+                    >Chăm sóc khách hàng (CS)</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase"
+                    >2 tuần</span
+                  >
+                </div>
+                <div
+                  class="bg-white p-6 rounded-xl border-l-4 border-indigo-600 shadow-sm flex items-center justify-between"
+                >
+                  <span class="font-bold text-gray-800"
+                    >Kinh Doanh (Business)</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full uppercase"
+                    >3 tháng</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge Hub -->
+    <section id="knowledge" class="py-20 bg-blue-900 text-white">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="text-center mb-16">
+          <h3
+            class="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight"
+          >
+            Knowledge Hub
+          </h3>
+          <p class="text-blue-100 opacity-80 max-w-2xl mx-auto">
+            Ứng dụng công nghệ thực tế vào quy trình vận hành NVXL / OTL tại GHN
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Tool 1 -->
+          <div
+            class="bg-white/10 p-8 rounded-2xl hover:bg-white/20 transition-all group border border-white/10"
+          >
+            <div
+              class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-code text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Vibe Coding & Canvas</h4>
+            <p class="text-blue-100/70 text-sm leading-relaxed">
+              Ra lệnh cho AI viết code web, soạn thảo SOP và thiết kế giao diện
+              báo cáo vận hành chuyên nghiệp.
+            </p>
+          </div>
+
+          <!-- Tool 2 -->
+          <div
+            class="bg-white/10 p-8 rounded-2xl hover:bg-white/20 transition-all group border border-white/10"
+          >
+            <div
+              class="w-14 h-14 bg-gray-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+            >
+              <i class="fab fa-github text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Github</h4>
+            <p class="text-blue-100/70 text-sm leading-relaxed">
+              Lưu trữ tài liệu, mã nguồn các tool tự động và host báo cáo cá
+              nhân/đội nhóm an toàn.
+            </p>
+          </div>
+
+          <!-- Tool 3 -->
+          <div
+            class="bg-white/10 p-8 rounded-2xl hover:bg-white/20 transition-all group border border-white/10"
+          >
+            <div
+              class="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-project-diagram text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-3">N8N Automation</h4>
+            <p class="text-blue-100/70 text-sm leading-relaxed">
+              "Bộ não" trung tâm kết nối dữ liệu: Tự động lấy file Backlog từ
+              Sheets, xử lý và gửi cảnh báo.
+            </p>
+          </div>
+
+          <!-- Tool 4 -->
+          <div
+            class="bg-white/10 p-8 rounded-2xl hover:bg-white/20 transition-all group border border-white/10"
+          >
+            <div
+              class="w-14 h-14 bg-indigo-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-brain text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Gemini AI</h4>
+            <p class="text-blue-100/70 text-sm leading-relaxed">
+              Trợ lý phân tích dữ liệu: Làm sạch dữ liệu rác, đọc file log và
+              phân tích nguyên nhân rớt GTC.
+            </p>
+          </div>
+
+          <!-- Tool 5 -->
+          <div
+            class="bg-white/10 p-8 rounded-2xl hover:bg-white/20 transition-all group border border-white/10"
+          >
+            <div
+              class="w-14 h-14 bg-sky-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition"
+            >
+              <i class="fas fa-paper-plane text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Telegram/Gtalk</h4>
+            <p class="text-blue-100/70 text-sm leading-relaxed">
+              Kênh nhận thông báo "Nóng" về sự cố vận hành, lệch COD, tồn kho
+              ngay lập tức trên mobile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showcase Sản phẩm -->
+    <section id="workflow" class="py-20 bg-gray-50 overflow-hidden">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2
+          class="section-title text-blue-600 font-bold mb-4 uppercase tracking-widest text-sm"
+        >
+          The Workflow
+        </h2>
+        <h3 class="text-3xl font-extrabold text-blue-900 mb-12">
+          Showcase Sản phẩm: Bot Tự động hóa
+        </h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Vấn đề & Giải pháp -->
+          <div class="space-y-10">
+            <div>
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold"
+                  >1</span
+                >
+                <h4
+                  class="text-xl font-bold text-gray-800 uppercase tracking-tight"
+                >
+                  Vấn đề vận hành (Problem)
+                </h4>
+              </div>
+              <ul class="space-y-3 text-gray-600 text-sm">
+                <li class="flex items-start">
+                  <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                  <span
+                    >Tỷ lệ GTC phụ thuộc vào báo cáo thủ công gửi muộn cuối
+                    ngày.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                  <span
+                    >Dữ liệu COD phải kiểm tra sau 22h30 trên hệ thống, dễ sai
+                    sót.</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
+                  <span
+                    >OTL tốn nhiều thời gian tổng hợp nguồn, dữ liệu thiếu trực
+                    quan.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold"
+                  >2</span
+                >
+                <h4
+                  class="text-xl font-bold text-gray-800 uppercase tracking-tight"
+                >
+                  Giải pháp công nghệ (Solution)
+                </h4>
+              </div>
+              <div
+                class="bg-blue-600 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden"
+              >
+                <p class="font-medium mb-4 relative z-10">
+                  Workflow tự động thiết kế để Thu thập - Xử lý - Phân tích -
+                  Gửi báo cáo nhân sự vào 22h30 mỗi ngày.
+                </p>
+                <div
+                  class="grid grid-cols-2 gap-3 text-[10px] relative z-10 uppercase tracking-wider font-bold"
+                >
+                  <div class="bg-white/20 p-2 rounded-lg">
+                    <i class="fas fa-file-excel mr-2"></i>Google Sheets
+                  </div>
+                  <div class="bg-white/20 p-2 rounded-lg">
+                    <i class="fas fa-robot mr-2"></i>Gemini AI Agent
+                  </div>
+                </div>
+                <i
+                  class="fas fa-bolt absolute -bottom-4 -right-4 text-8xl opacity-10"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workflow Diagram Area -->
+          <div
+            class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100"
+          >
+            <div
+              class="bg-gray-800 text-white p-3 rounded-t-2xl flex items-center space-x-2"
+            >
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="text-xs ml-4 opacity-50 uppercase tracking-tighter"
+                >Luồng xử lý N8N thực tế</span
+              >
+            </div>
+            <div
+              class="overflow-hidden bg-gray-50 rounded-b-2xl border-t border-gray-200"
+            >
+              <img
+                src="assert/workflow.jpg"
+                alt="N8N Workflow Diagram"
+                class="w-full h-auto img-zoom"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Evidence Section -->
+        <div class="mt-24">
+          <h4
+            class="text-center font-bold text-2xl text-blue-900 mb-12 uppercase tracking-tight"
+          >
+            Minh chứng (Evidence)
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div
+              class="bg-white p-2 rounded-3xl shadow-lg border border-gray-100 overflow-hidden"
+            >
+              <img
+                src="assert/thongbao.jpg"
+                alt="Telegram Report"
+                class="w-full h-auto rounded-2xl"
+              />
+            </div>
+            <div class="space-y-6">
+              <div
+                class="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-500"
+              >
+                <h5
+                  class="text-xl font-bold text-blue-900 mb-3 uppercase tracking-tight"
+                >
+                  Kết quả đầu ra
+                </h5>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  AI Agent tự động phân loại nội dung, tổng hợp báo cáo ngắn gọn
+                  và highlight các trường hợp nhân viên tỷ lệ giao thấp hoặc
+                  thiếu tiền COD. Giúp OM kiểm soát rủi ro tài chính tức thì.
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="assert/demo.mp4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-blue-700 transition flex items-center text-sm"
+                >
+                  <i class="fas fa-play-circle mr-2 text-lg"></i> XEM VIDEO DEMO
+                </a>
+                <a
+                  href="https://share-n8n.com/shared/qNDA1uZkdX9x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-white border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition text-sm"
+                >
+                  <i class="fas fa-external-link-alt mr-2 text-lg"></i> LINK
+                  TRẢI NGHIỆM
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification -->
+    <section id="cert" class="py-24 bg-gradient-blue text-white">
+      <div class="container mx-auto px-4 max-w-5xl text-center">
+        <h3
+          class="text-3xl md:text-4xl font-extrabold mb-12 uppercase tracking-wide"
+        >
+          Certification
+        </h3>
+
+        <div
+          class="max-w-3xl mx-auto rounded-3xl shadow-2xl overflow-hidden border-8 border-white/20"
+        >
+          <img
+            src="assert/cert.png"
+            alt="Gemini Certified Student Certificate"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <p
+          class="mt-10 text-blue-100 opacity-80 max-w-xl mx-auto italic text-sm"
+        >
+          Chứng nhận cấp ngày 29/01/2026 bởi Google for Education dành cho việc
+          ứng dụng thành thạo Google AI vào giải quyết bài toán doanh nghiệp.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+      <div class="container mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-6 mb-8">
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white transition shadow-sm"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p class="text-gray-400 text-sm font-semibold tracking-wide">
+          © 2026 NGUYỄN TIẾN ĐẠT - FUTURE MAKER
+        </p>
+        <p
+          class="text-[10px] text-gray-300 mt-2 uppercase tracking-[0.3em] font-bold"
+        >
+          GHN Operation Automation Portfolio
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("py-2", "bg-white/95");
+          header.classList.remove("py-4");
+        } else {
+          header.classList.add("py-4");
+          header.classList.remove("py-2", "bg-white/95");
+        }
+      };
+    </script>
+  </body>
+</html>
